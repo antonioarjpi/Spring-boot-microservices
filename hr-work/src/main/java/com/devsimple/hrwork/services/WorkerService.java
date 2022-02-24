@@ -1,6 +1,6 @@
 package com.devsimple.hrwork.services;
 
-import com.devsimple.hrwork.WorkerRepository;
+import com.devsimple.hrwork.repository.WorkerRepository;
 import com.devsimple.hrwork.model.Worker;
 import com.devsimple.hrwork.services.exception.ObjectNotFoundException;
 import lombok.AllArgsConstructor;

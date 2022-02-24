@@ -1,6 +1,6 @@
 package com.devsimple.hrwork.config;
 
-import com.devsimple.hrwork.WorkerRepository;
+import com.devsimple.hrwork.repository.WorkerRepository;
 import com.devsimple.hrwork.model.Worker;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;

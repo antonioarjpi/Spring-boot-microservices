@@ -1,4 +1,4 @@
-package com.devsimple.hrwork;
+package com.devsimple.hrwork.repository;
 
 import com.devsimple.hrwork.model.Worker;
 import org.springframework.data.jpa.repository.JpaRepository;
