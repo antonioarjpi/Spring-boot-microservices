@@ -4,13 +4,9 @@ import com.devsimple.payroll.feign.WorkerFeignClient;
 import com.devsimple.payroll.model.Payment;
 import com.devsimple.payroll.model.Worker;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
-import java.util.HashMap;
-import java.util.Map;
+
 
 @Service
 @AllArgsConstructor

@@ -8,11 +8,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Data
 @Entity
 @Table(name = "tb_worker")
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor @AllArgsConstructor @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Worker implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -23,4 +21,5 @@ public class Worker implements Serializable {
     private Long id;
     private String name;
     private Double dailyIncome;
+
 }

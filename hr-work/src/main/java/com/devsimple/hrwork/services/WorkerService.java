@@ -4,6 +4,7 @@ import com.devsimple.hrwork.repository.WorkerRepository;
 import com.devsimple.hrwork.model.Worker;
 import com.devsimple.hrwork.services.exception.ObjectNotFoundException;
 import lombok.AllArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,5 +26,14 @@ public class WorkerService {
         return workerRepository.findById(id)
                 .orElseThrow(() -> new ObjectNotFoundException("Worker not found"));
     }
+
+//    @Transactional
+//    public Worker save(Worker worker){
+//        try {
+//            return workerRepository.save(worker);
+//        }catch (DataIntegrityViolationException e){
+//            throw new IllegalArgumentException("Formato inválido");
+//        }
+//    }
 
 }
