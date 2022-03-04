@@ -10,8 +10,9 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity(name = "tb_user")
-@NoArgsConstructor @AllArgsConstructor @Data
+@Entity
+@Table(name = "tb_user")
+@NoArgsConstructor @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -31,5 +32,10 @@ public class User implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
-
+    public User(Long id, String name, String email, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
 }
