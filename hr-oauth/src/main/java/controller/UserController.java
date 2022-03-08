@@ -19,11 +19,12 @@ public class UserController {
 
     @GetMapping(value = "/search")
     public ResponseEntity<User> findByEmail(@RequestParam String email) {
-        try {
-            User user = userService.findByEmail(email);
-            return ResponseEntity.ok(user);
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        User user = userService.findByEmail(email);
+        if (user == null) {
+            return ResponseEntity.notFound().build();
         }
+
+        return ResponseEntity.ok().body(user);
     }
+
 }
