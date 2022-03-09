@@ -31,7 +31,7 @@ public class Instantiation implements CommandLineRunner {
         User user2 = new User(null, "Rigoni Emilio", "rigoni@gmail.com", passwordEncoder.encode("123456"));
         User user3 = new User(null, "Calleri Silva", "calleri@gmail.com", passwordEncoder.encode("123456"));
 
-        user1.getRoles().addAll(Arrays.asList(roleAdmin));
+        user1.getRoles().addAll(Arrays.asList(roleAdmin, roleOperator));
         user2.getRoles().addAll(Arrays.asList(roleOperator));
         user3.getRoles().addAll(Arrays.asList(roleOperator));
 

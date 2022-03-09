@@ -27,13 +27,9 @@ public class WorkerService {
                 .orElseThrow(() -> new ObjectNotFoundException("Worker not found"));
     }
 
-//    @Transactional
-//    public Worker save(Worker worker){
-//        try {
-//            return workerRepository.save(worker);
-//        }catch (DataIntegrityViolationException e){
-//            throw new IllegalArgumentException("Formato inválido");
-//        }
-//    }
+    @Transactional
+    public Worker save(Worker worker){
+        return workerRepository.save(worker);
+    }
 
 }
